@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "heelermod",
+  "version": "${version}",
+
+  "name": "Heeler Mod",
+  "description": "Adds Australian Cattle Dogs to Minecraft.",
+  "authors": [
+    "ChukkTheDukk"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.chukkthedukk.heelermod.HeelerMod"
+    ]
+  },
+  "mixins": [
+    "heelermod.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.12.12",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

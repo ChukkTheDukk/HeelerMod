@@ -2,7 +2,6 @@ package net.chukkthedukk.heelermod.entity.client;
 
 import net.chukkthedukk.heelermod.HeelerMod;
 import net.chukkthedukk.heelermod.entity.custom.HeelerEntity;
-import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.processor.IBone;
@@ -17,7 +16,7 @@ public class HeelerModel extends AnimatedGeoModel<HeelerEntity> {
 
     @Override
     public Identifier getTextureLocation(HeelerEntity object) {
-        return new Identifier(HeelerMod.MOD_ID, "textures/entity/heeler/heeler.png");
+        return new Identifier(HeelerMod.MOD_ID, "textures/entity/heeler/heeler_blue.png");
     }
 
     @Override

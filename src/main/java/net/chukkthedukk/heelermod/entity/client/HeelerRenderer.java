@@ -13,6 +13,6 @@ public class HeelerRenderer extends GeoEntityRenderer<HeelerEntity> {
 
     @Override
     public Identifier getTextureLocation(HeelerEntity instance) {
-        return new Identifier(HeelerMod.MOD_ID, "textures/entity/heeler/heeler.png");
+        return new Identifier(HeelerMod.MOD_ID, "textures/entity/heeler/heeler_blue.png");
     }
 }

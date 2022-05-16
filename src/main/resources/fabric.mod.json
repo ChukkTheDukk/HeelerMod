@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.chukkthedukk.heelermod.HeelerMod"
+    ],
+    "client": [
+      "net.chukkthedukk.heelermod.HeelerClientMod"
     ]
   },
   "mixins": [

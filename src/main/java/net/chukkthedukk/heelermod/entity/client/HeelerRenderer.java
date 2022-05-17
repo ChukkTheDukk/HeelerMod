@@ -26,6 +26,14 @@ public class HeelerRenderer extends GeoEntityRenderer<HeelerEntity> {
                         new Identifier(HeelerMod.MOD_ID, "textures/entity/heeler/heeler_blue1b.png"));
                 map.put(HeelerVariant.BLUE2,
                         new Identifier(HeelerMod.MOD_ID, "textures/entity/heeler/heeler_blue2.png"));
+                map.put(HeelerVariant.RED,
+                        new Identifier(HeelerMod.MOD_ID, "textures/entity/heeler/heeler_red.png"));
+                map.put(HeelerVariant.RED1A,
+                        new Identifier(HeelerMod.MOD_ID, "textures/entity/heeler/heeler_red1a.png"));
+                map.put(HeelerVariant.RED1B,
+                        new Identifier(HeelerMod.MOD_ID, "textures/entity/heeler/heeler_red1b.png"));
+                map.put(HeelerVariant.RED2,
+                        new Identifier(HeelerMod.MOD_ID, "textures/entity/heeler/heeler_red2.png"));
             });
 
     public HeelerRenderer(EntityRendererFactory.Context ctx) {

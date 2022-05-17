@@ -13,6 +13,6 @@ public class ModEntities {
     public static final EntityType<HeelerEntity> HEELER = Registry.register(
             Registry.ENTITY_TYPE, new Identifier(HeelerMod.MOD_ID, "heeler"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, HeelerEntity::new)
-                    .dimensions(EntityDimensions.fixed(0.4f, 0.6f)).build());
+                    .dimensions(EntityDimensions.fixed(0.5f, 0.4f)).build());
 
 }

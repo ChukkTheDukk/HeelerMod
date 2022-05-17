@@ -1,0 +1,22 @@
+package net.chukkthedukk.heelermod.world.gen;
+
+import com.eliotlash.mclib.math.functions.classic.Mod;
+import net.chukkthedukk.heelermod.entity.ModEntities;
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.fabric.mixin.object.builder.SpawnRestrictionAccessor;
+import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.SpawnRestriction;
+import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.world.Heightmap;
+import net.minecraft.world.biome.Biome;
+
+public class ModEntitySpawn {
+    public static void addEntitySpawn() {
+        BiomeModifications.addSpawn(BiomeSelectors.categories(Biome.Category.SAVANNA),
+                SpawnGroup.CREATURE, ModEntities.HEELER,25, 1, 2);
+
+        SpawnRestrictionAccessor.callRegister(ModEntities.HEELER, SpawnRestriction.Location.ON_GROUND,
+                Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::isValidNaturalSpawn);
+    }
+}

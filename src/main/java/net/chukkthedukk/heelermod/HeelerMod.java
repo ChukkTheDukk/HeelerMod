@@ -2,6 +2,7 @@ package net.chukkthedukk.heelermod;
 
 import net.chukkthedukk.heelermod.item.ModItems;
 import net.chukkthedukk.heelermod.util.ModRegistries;
+import net.chukkthedukk.heelermod.world.gen.ModWorldGen;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,6 +17,7 @@ public class HeelerMod implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModRegistries.registerModStuffs();
+		ModWorldGen.generateModWorldGen();
 		GeckoLib.initialize();
 
 	}

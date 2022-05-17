@@ -16,7 +16,7 @@ public class HeelerModel extends AnimatedGeoModel<HeelerEntity> {
 
     @Override
     public Identifier getTextureLocation(HeelerEntity object) {
-        return new Identifier(HeelerMod.MOD_ID, "textures/entity/heeler/heeler_blue.png");
+        return HeelerRenderer.LOCATION_BY_VARIANT.get(object.getVariant());
     }
 
     @Override

@@ -13,6 +13,12 @@ public class ModItems {
     public static final Item HEELER_SPAWN_EGG = registerItem("heeler_spawn_egg",
             new SpawnEggItem(ModEntities.HEELER,0x948e8d, 0x3b3635,
                     new FabricItemSettings().group(ItemGroup.MISC)));
+    public static final Item WHEAT_FLOUR = registerItem("wheat_flour",
+            new Item(new FabricItemSettings().group(ItemGroup.FOOD)));
+    public static final Item MILKBONE_DOUGH = registerItem("milkbone_dough",
+            new Item(new FabricItemSettings().group(ItemGroup.FOOD)));
+    public static final Item MILKBONE = registerItem("milkbone",
+            new Item(new FabricItemSettings().group(ItemGroup.FOOD)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(HeelerMod.MOD_ID, name), item);

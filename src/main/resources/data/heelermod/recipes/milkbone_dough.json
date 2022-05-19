@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A A",
+    "BCD",
+    "A A"
+  ],
+  "key": {
+    "A": {
+      "item": "heelermod:wheat_flour"
+    },
+    "B": {
+      "item": "minecraft:milk_bucket"
+    },
+    "C": {
+      "item": "minecraft:bone"
+    },
+    "D": {
+      "item": "minecraft:beef"
+    }
+  },
+  "result": {
+    "item": "heelermod:milkbone_dough",
+    "count": 2
+  }
+}

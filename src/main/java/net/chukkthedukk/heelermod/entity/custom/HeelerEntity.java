@@ -72,7 +72,7 @@ public class HeelerEntity extends TameableEntity implements IAnimatable {
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
         this.goalSelector.add(1, new SitGoal(this));
-        this.goalSelector.add(2, new FollowOwnerGoal(this, 1.25f, 12.0f, 2.0f, false ));
+        this.goalSelector.add(2, new FollowOwnerGoal(this, 1.0f, 10.0f, 2.0f, false ));
         this.goalSelector.add(3, new WanderAroundPointOfInterestGoal(this, 0.75f, false));
         this.goalSelector.add(4, new WanderAroundFarGoal(this, 0.75f, 1));
         this.goalSelector.add(5, new LookAroundGoal(this));
@@ -180,7 +180,7 @@ public class HeelerEntity extends TameableEntity implements IAnimatable {
     public void setTamed(boolean tamed) {
         super.setTamed(tamed);
         if (tamed) {
-            getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).setBaseValue(40.0D);
+            getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).setBaseValue(20.0D);
             getAttributeInstance(EntityAttributes.GENERIC_ATTACK_DAMAGE).setBaseValue(4D);
             getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED).setBaseValue((double)0.5f);
         } else {

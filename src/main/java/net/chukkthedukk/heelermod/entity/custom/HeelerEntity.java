@@ -2,6 +2,7 @@ package net.chukkthedukk.heelermod.entity.custom;
 
 import net.chukkthedukk.heelermod.entity.ModEntities;
 import net.chukkthedukk.heelermod.entity.variant.HeelerVariant;
+import net.chukkthedukk.heelermod.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
@@ -58,7 +59,7 @@ public class HeelerEntity extends TameableEntity implements IAnimatable {
 
     @Override
     public boolean isBreedingItem(ItemStack stack) {
-        return stack.getItem() == Items.BEEF;
+        return stack.getItem() == ModItems.MILKBONE;
     }
 
     public static DefaultAttributeContainer.Builder setAttributes() {
@@ -71,12 +72,14 @@ public class HeelerEntity extends TameableEntity implements IAnimatable {
 
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
-        this.goalSelector.add(1, new SitGoal(this));
-        this.goalSelector.add(2, new FollowOwnerGoal(this, 1.0f, 10.0f, 2.0f, false ));
-        this.goalSelector.add(3, new WanderAroundPointOfInterestGoal(this, 0.75f, false));
-        this.goalSelector.add(4, new WanderAroundFarGoal(this, 0.75f, 1));
-        this.goalSelector.add(5, new LookAroundGoal(this));
-        this.goalSelector.add(6, new LookAtEntityGoal(this, PlayerEntity.class, 8.0f));
+        this.goalSelector.add(1, new EscapeDangerGoal(this, 1.25D));
+        this.goalSelector.add(2, new SitGoal(this));
+        this.goalSelector.add(3, new FollowOwnerGoal(this, 1.0f, 10.0f, 2.0f, false ));
+        this.goalSelector.add(4, new FollowParentGoal(this, 1.1D));
+        this.goalSelector.add(5, new WanderAroundPointOfInterestGoal(this, 0.75f, false));
+        this.goalSelector.add(6, new WanderAroundFarGoal(this, 0.75f, 1));
+        this.goalSelector.add(7, new LookAroundGoal(this));
+        this.goalSelector.add(8, new LookAtEntityGoal(this, PlayerEntity.class, 8.0f));
 
         this.targetSelector.add(1, new AnimalMateGoal(this, 1.0));
     }
@@ -182,9 +185,9 @@ public class HeelerEntity extends TameableEntity implements IAnimatable {
         if (tamed) {
             getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).setBaseValue(20.0D);
             getAttributeInstance(EntityAttributes.GENERIC_ATTACK_DAMAGE).setBaseValue(4D);
-            getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED).setBaseValue((double)0.5f);
+            getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED).setBaseValue((double)0.375f);
         } else {
-            getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).setBaseValue(20.0D);
+            getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH).setBaseValue(10.0D);
             getAttributeInstance(EntityAttributes.GENERIC_ATTACK_DAMAGE).setBaseValue(2D);
             getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED).setBaseValue((double)0.25f);
         }
